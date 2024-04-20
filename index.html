@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://open.spotifycdn.com/cdn/images/favicon.0f31d2ea.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="output.css">
+    <title>Spotify - Web Player: Music for everyone</title>
+</head>
+
+<body>
+    <div class="h-screen w-full bg-black text-white flex gap-2 relative p-2">
+        <div class="left-part h-full w-[25vw]  bg-black rounded-xl ">
+            <div class="home w-full h-[30%] bg-[#121212] rounded-xl mb-2 space-y-6 p-4">
+                <div class="logo">
+                    <img class="w-[100px] h-auto invert-[1] text-black cursor-pointer" src="./img/logo.svg"
+                        alt="spotify-logo">
+                </div>
+                <ul class="ml-4 space-y-3">
+                    <li
+                        class="group text-lg flex items-center gap-4 cursor-pointer invert-[0.5] text-black font-bold hover:invert-[1]">
+                        <img class=" w-[25px] h=auto invert-[0.5] text-black group-hover:invert-[0] "
+                            src="./img/home.svg" alt="">Home
+                    </li>
+                    <li
+                        class="group text-lg flex items-center gap-4 cursor-pointer invert-[0.5] text-black font-bold hover:invert-[1]">
+                        <img class="w-[25px] h=auto invert-[0.5] text-black group-hover:invert-[0]"
+                            src="./img/search.svg" alt="">Search
+                    </li>
+                </ul>
+            </div>
+            <div class="library w-full h-[58%] bg-[#121212] rounded-t-xl p-4 space-y-6">
+                <div class=" top ">
+                    <h1
+                        class=" group text-lg flex items-center gap-4 cursor-pointer invert-[0.5] text-black font-bold hover:invert-[1]">
+                        <img class="w-[25px] h=auto invert-[0.5] text-black group-hover:invert-[0]"
+                            src="./img/library.svg" alt="library"> Your Library
+                    </h1>
+                </div>
+                <div class="libraryList w-full h-[90%] overflow-y-scroll overflow-x-hidden">
+                    <ul class="space-y-2 w-[98%]">
+                        <!-- <li
+                            class="flex items-center justify-start p-2 border-[1px] border-white rounded-xl cursor-pointer relative">
+                            <img src="./img/music.svg" alt="">
+                            <div class="songInfo self-start ml-2 max-w-[80%]">
+                                <p class="text-xs">jshjfhzdsfuzdf hjhsfjhszdf</p>
+                                <p class="text-xs">jshjfhzdsfuzdf hjhsfjhszdf</p>
+                            </div>
+                            <img class="absolute right-2" src="./img/play.svg" alt="">
+                        </li> -->
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class=" left-footer w-full h-[10%] bg-[#121212] rounded-b-xl p-4 text-xs space-x-4 text-[#A7A599]">
+                <span>Legal</span>
+                <span>Safety & Privacy Center</span>
+                <span>Privacy Policy</span>
+                <span>Cookies</span>
+                <span>About Ads</span>
+                <span>Accessibility</span>
+            </div>
+        </div>
+        <div class="right-part h-full w-[75vw] bg-[#121212] rounded-xl overflow-hidden relative flex flex-col">
+            <div class="header w-[100%] h-[80px] bg-[#111111] flex items-center justify-between px-6">
+                <div class="left-nav flex items-center gap-2">
+                    <img class="bg-[#0A0A0A] rounded-full w-[35px] p-1 cursor-not-allowed" src="./img/left.svg" alt="">
+                    <img class="bg-[#0A0A0A] rounded-full w-[35px] p-1  cursor-not-allowed" src="./img/right.svg"
+                        alt="">
+                </div>
+                <div class="right-nav flex items-center gap-4 ">
+                    <button class="text-[#dadada] text-base font-medium hover:text-white hover:scale-110 py-2 px-4">Sign
+                        up</button>
+                    <button class="text-black bg-white rounded-full text-base font-medium hover:scale-110 py-2 px-7">Log
+                        in</button>
+                </div>
+            </div>
+            <div class="playList w-full h-[80%] bg-[#1A1A1A] p-10">
+                <h1 class="text-2xl font-medium mb-10">Spotify Playlists</h1>
+
+                <div
+                    class="cardContainer relative flex flex-wrap items-center justify-center gap-4 overflow-y-scroll h-[60%]">
+                    <div class="card w-[150px] h-[180px] bg-[#1E1E1E] p-2 rounded-sm">
+                        <img class="w-[100%] h-[60%] object-cover object-top" src="./img/img.jpg" alt="">
+                        <h4 class="self-start text-sm font-medium">Happy Hits!</h4>
+                        <p class="self-start text-xs ">Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+
+                    </div>
+                    <div class="card w-[150px] h-[180px] bg-[#1E1E1E] p-2 rounded-sm">
+                        <img class="w-[100%] h-[60%] object-cover object-top" src="./img/img.jpg" alt="">
+                        <h4 class="self-start text-sm font-medium">Happy Hits!</h4>
+                        <p class="self-start text-xs ">Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+
+                    </div>
+                    <div class="card w-[150px] h-[180px] bg-[#1E1E1E] p-2 rounded-sm">
+                        <img class="w-[100%] h-[60%] object-cover object-top" src="./img/img.jpg" alt="">
+                        <h4 class="self-start text-sm font-medium">Happy Hits!</h4>
+                        <p class="self-start text-xs ">Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+
+                    </div>
+                    <div class="card w-[150px] h-[180px] bg-[#1E1E1E] p-2 rounded-sm">
+                        <img class="w-[100%] h-[60%] object-cover object-top" src="./img/img.jpg" alt="">
+                        <h4 class="self-start text-sm font-medium">Happy Hits!</h4>
+                        <p class="self-start text-xs ">Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+
+                    </div>
+                    <div class="card w-[150px] h-[180px] bg-[#1E1E1E] p-2 rounded-sm">
+                        <img class="w-[100%] h-[60%] object-cover object-top" src="./img/img.jpg" alt="">
+                        <h4 class="self-start text-sm font-medium">Happy Hits!</h4>
+                        <p class="self-start text-xs ">Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+
+                    </div>
+                    <div class="card w-[150px] h-[180px] bg-[#1E1E1E] p-2 rounded-sm">
+                        <img class="w-[100%] h-[60%] object-cover object-top" src="./img/img.jpg" alt="">
+                        <h4 class="self-start text-sm font-medium">Happy Hits!</h4>
+                        <p class="self-start text-xs ">Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+
+                    </div>
+                    <div class="card w-[150px] h-[180px] bg-[#1E1E1E] p-2 rounded-sm">
+                        <img class="w-[100%] h-[60%] object-cover object-top" src="./img/img.jpg" alt="">
+                        <h4 class="self-start text-sm font-medium">Happy Hits!</h4>
+                        <p class="self-start text-xs ">Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+
+                    </div>
+                    <div class="card w-[150px] h-[180px] bg-[#1E1E1E] p-2 rounded-sm">
+                        <img class="w-[100%] h-[60%] object-cover object-top" src="./img/img.jpg" alt="">
+                        <h4 class="self-start text-sm font-medium">Happy Hits!</h4>
+                        <p class="self-start text-xs ">Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+
+                    </div>
+                    <div class="card w-[150px] h-[180px] bg-[#1E1E1E] p-2 rounded-sm">
+                        <img class="w-[100%] h-[60%] object-cover object-top" src="./img/img.jpg" alt="">
+                        <h4 class="self-start text-sm font-medium">Happy Hits!</h4>
+                        <p class="self-start text-xs ">Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+
+                    </div>
+                    <div class="card w-[150px] h-[180px] bg-[#1E1E1E] p-2 rounded-sm">
+                        <img class="w-[100%] h-[60%] object-cover object-top" src="./img/img.jpg" alt="">
+                        <h4 class="self-start text-sm font-medium">Happy Hits!</h4>
+                        <p class="self-start text-xs ">Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+
+                    </div>
+                    <div class="card w-[150px] h-[180px] bg-[#1E1E1E] p-2 rounded-sm">
+                        <img class="w-[100%] h-[60%] object-cover object-top" src="./img/img.jpg" alt="">
+                        <h4 class="self-start text-sm font-medium">Happy Hits!</h4>
+                        <p class="self-start text-xs ">Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+
+                    </div>
+                    <div class="card w-[150px] h-[180px] bg-[#1E1E1E] p-2 rounded-sm">
+                        <img class="w-[100%] h-[60%] object-cover object-top" src="./img/img.jpg" alt="">
+                        <h4 class="self-start text-sm font-medium">Happy Hits!</h4>
+                        <p class="self-start text-xs ">Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+
+                    </div>
+                </div>
+                <div
+                    class="playContainer absolute bottom-2 h-[80px] w-[100%] bg-[#333] left-0 flex flex-col items-center justify-center px-10">
+                    <div class="  w-[100%] flex items-center justify-between">
+                        <h4 id="songTitle" class=" w-[50%] text-sm font-medium opacity-50 cursor-context-menu ">
+
+                        </h4>
+                        <div class="controls w-[30%] flex justify-evenly ">
+                            <img class="w-8 cursor-pointer hover:scale-105" src="./img/previous.svg" alt="">
+                            <img id="playBtn" class="w-8 cursor-pointer hover:scale-105" src="./img/play.svg" alt="">
+                            <img class="w-8 cursor-pointer hover:scale-105" src="./img/next.svg" alt="">
+                        </div>
+                        <span id="duration"
+                            class=" w-[20%] text-sm font-medium opacity-50 cursor-context-menu">00:00/00:00
+                        </span>
+                    </div>
+                    <div
+                        class="seekBar cursor-pointer h-1 w-[90%] m-auto bottom-1 bg-white absolute flex items-center rounded-xl">
+                        <div
+                            class="circle w-4 h-4 rounded-full bg-white left-[0%] relative transition duration-1000 ease-out">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
