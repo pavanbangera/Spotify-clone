@@ -45,7 +45,7 @@ let getsong = async () => {
                 <img src="./img/music.svg" alt="">
                 <div class="songInfo self-start ml-2 max-w-[80%]">
                     <p class="text-xs opacity-50 font-light" >${song}</p>
-                    <p class="text-xs" >bangera</p>
+                    <p class="text-xs" >- bangera</p>
                 </div>
                 <img class="absolute right-2" src="./img/play.svg" alt="">
             </li>`;
@@ -101,5 +101,15 @@ let playSong = async (url, pause = false) => {
         let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100;
         document.querySelector(".circle").style.left = percent + "%";
         currentTrack.currentTime = ((currentTrack.duration) * percent) / 100
+    })
+
+
+    //hamburger btn
+    document.querySelector("#menu").addEventListener("click", () => {
+        document.querySelector(".left-part").style.left = "0"
+    })
+    //hamburger close btn
+    document.querySelector("#close").addEventListener("click", () => {
+        document.querySelector(".left-part").style.left = "-150%"
     })
 })();
