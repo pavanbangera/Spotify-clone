@@ -1,5 +1,6 @@
 let songs;
 let currentTrack;
+const domainUrl = `https://github.com/pavanbangera/Spotify-clone/tree/master/songs`
 
 function secondsToMinutesSeconds (seconds) {
     if (isNaN(seconds) || seconds < 0) {
@@ -17,7 +18,8 @@ function secondsToMinutesSeconds (seconds) {
 
 
 let getsong = async () => {
-    let a = await fetch("http://127.0.0.1:5500/songs/");
+    // let a = await fetch("http://127.0.0.1:5500/songs/");
+    let a = await fetch(domainUrl);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -30,7 +32,7 @@ let getsong = async () => {
             // songs.push(element.href.split("http://127.0.0.1:5500/songs/"))
             songs.push(element.title);
         }
-        currentTrack.src = `http://127.0.0.1:5500/songs/${songs[0]}`
+        currentTrack.src = `${domainUrl}/${songs[0]}`
     }
 
 
@@ -63,7 +65,7 @@ let getsong = async () => {
 
 let playSong = async (url, pause = false) => {
     if (!pause) {
-        currentTrack.src = `http://127.0.0.1:5500/songs/${url}`;
+        currentTrack.src = `${domainUrl}/${url}`;
         currentTrack.play();
         playBtn.src = `./img/pause.svg`
 
