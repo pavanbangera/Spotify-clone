@@ -17,7 +17,7 @@
 <body>
     <div class="h-screen w-full bg-black text-white flex gap-2 relative p-2">
         <div
-            class="left-part h-full md:w-[25vw] w-full left-[-150%] md:left-0 absolute md:relative z-10  bg-black rounded-xl transition-all duration-500 ease-linear delay-0  ">
+            class="left-part h-full md:w-[25vw] w-full left-[-150%] md:left-0 absolute md:relative z-10  bg-black rounded-xl transition duration-500 ease-linear ">
             <div class="home w-full h-[30%] bg-[#121212] rounded-xl mb-2 space-y-6 p-4">
                 <img id="close" src="./img/cancel.svg"
                     class="absolute right-6 top-8 cursor-pointer hover:scale-110 transition-all duration-500 ease-linear delay-0 md:hidden"
@@ -95,42 +95,17 @@
                 <h1 class="text-2xl font-medium mb-10">Spotify Playlists</h1>
 
                 <div
-                    class="cardContainer relative flex flex-wrap items-center justify-center gap-4 overflow-y-auto h-[70%]">
-                    <div class="card md:w-[150px] w-[70vw] md:h-[180px] h-[80vw] bg-[#1E1E1E] p-2 rounded-sm">
+                    class="cardContainer relative flex flex-wrap items-start justify-start gap-4 overflow-y-auto h-[70%]">
+                    <!-- <div data-folder="english"
+                        class="group flex flex-col justify-evenly card md:w-[200px] w-[70vw] md:h-[240px]  h-[80vw] bg-[#1E1E1E] p-2 rounded-sm transition duration-500 ease-linear hover:bg-[#333] cursor-pointer relative">
+                        <img class="absolute transition duration-500 ease-linear right-[6%] top-[60%] md:top-[50%] bg-pink-600 w-10 h-10 rounded-full invert scale-0  group-hover:scale-100  "
+                            src="./img/play.svg" alt="">
                         <img class="w-[100%] h-[60%] object-cover object-top" src="./img/img.jpg" alt="">
-                        <h4 class="self-start text-lg md:text-sm font-medium">Happy Hits!</h4>
+                        <h4 class="self-start text-lg md:text-base font-medium">Happy Hits!</h4>
                         <p class="self-start text-base md:text-xs ">Lorem ipsum dolor sit amet consectetur adipisicing
                             elit..</p>
 
-                    </div>
-                    <div class="card md:w-[150px] w-[70vw] md:h-[180px] h-[80vw] bg-[#1E1E1E] p-2 rounded-sm">
-                        <img class="w-[100%] h-[60%] object-cover object-top" src="./img/img.jpg" alt="">
-                        <h4 class="self-start text-lg md:text-sm font-medium">Happy Hits!</h4>
-                        <p class="self-start text-base md:text-xs ">Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit..</p>
-
-                    </div>
-                    <div class="card md:w-[150px] w-[70vw] md:h-[180px] h-[80vw] bg-[#1E1E1E] p-2 rounded-sm">
-                        <img class="w-[100%] h-[60%] object-cover object-top" src="./img/img.jpg" alt="">
-                        <h4 class="self-start text-lg md:text-sm font-medium">Happy Hits!</h4>
-                        <p class="self-start text-base md:text-xs ">Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit..</p>
-
-                    </div>
-                    <div class="card md:w-[150px] w-[70vw] md:h-[180px] h-[80vw] bg-[#1E1E1E] p-2 rounded-sm">
-                        <img class="w-[100%] h-[60%] object-cover object-top" src="./img/img.jpg" alt="">
-                        <h4 class="self-start text-lg md:text-sm font-medium">Happy Hits!</h4>
-                        <p class="self-start text-base md:text-xs ">Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit..</p>
-
-                    </div>
-                    <div class="card md:w-[150px] w-[70vw] md:h-[180px] h-[80vw] bg-[#1E1E1E] p-2 rounded-sm">
-                        <img class="w-[100%] h-[60%] object-cover object-top" src="./img/img.jpg" alt="">
-                        <h4 class="self-start text-lg md:text-sm font-medium">Happy Hits!</h4>
-                        <p class="self-start text-base md:text-xs ">Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit..</p>
-
-                    </div>
+                    </div> -->
 
                 </div>
                 <div
@@ -139,14 +114,20 @@
                         <h4 id="songTitle" class=" md:w-[50%] text-sm font-medium opacity-50 cursor-context-menu ">
 
                         </h4>
-                        <div class="controls md:w-[30%] flex justify-evenly ">
-                            <img class="w-8 cursor-pointer hover:scale-105" src="./img/previous.svg" alt="">
+                        <div class="controls md:w-[30%] flex justify-evenly py-2 md:py-0 ">
+                            <img id="previousBtn" class="w-8 cursor-pointer hover:scale-105" src="./img/previous.svg"
+                                alt="">
                             <img id="playBtn" class="w-8 cursor-pointer hover:scale-105" src="./img/play.svg" alt="">
-                            <img class="w-8 cursor-pointer hover:scale-105" src="./img/next.svg" alt="">
+                            <img id="nextBtn" class="w-8 cursor-pointer hover:scale-105" src="./img/next.svg" alt="">
                         </div>
-                        <span id="duration"
-                            class=" md:w-[20%] text-sm font-medium opacity-50 cursor-context-menu">00:00/00:00
-                        </span>
+                        <div class="flex flex-col items-center justify-center">
+                            <span id="duration" class=" text-sm font-medium opacity-50 cursor-context-menu">00:00/00:00
+                            </span>
+                            <div class="volumeContainer flex items-center justify-center gap-2">
+                                <img id="volumeLogo" class="cursor-pointer" src="./img/volume.svg" alt="">
+                                <input class="cursor-pointer" type="range" name="" id="volume">
+                            </div>
+                        </div>
                     </div>
                     <div
                         class="seekBar cursor-pointer h-1 w-[90%] m-auto  md:top-[90%] top-0  bg-white absolute flex items-center rounded-xl">
