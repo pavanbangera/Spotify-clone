@@ -1,7 +1,7 @@
 let songs;
 let currentTrack;
 let folder = "/hindi"
-const domainUrl = `/songs`
+const domainUrl = `/tree/master/songs`
 
 function secondsToMinutesSeconds (seconds) {
     if (isNaN(seconds) || seconds < 0) {
